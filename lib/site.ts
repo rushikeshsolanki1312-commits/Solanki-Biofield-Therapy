@@ -8,7 +8,7 @@ export const site = {
   phone: "+918830918094",
   phoneDisplay: "8830918094",
   whatsapp: "918830918094",
-  email: "rocareindia123@gmail.com",
+  email: "rushikeshsolanki1312@gmail.com",
   address: {
     line1: "Shop No 14, Polite Harmony Building",
     line2: "Near Sane Chowk Road, Nair Colony, More Vasti",
