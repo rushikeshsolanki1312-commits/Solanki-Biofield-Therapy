@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { products, site } from "@/lib/site";
 import Reveal from "./Reveal";
 
@@ -32,11 +33,28 @@ export default function Products() {
                 <div
                   className={`absolute -right-10 -top-10 h-32 w-32 rounded-full bg-gradient-to-br ${p.accent} opacity-20 blur-xl transition-opacity group-hover:opacity-40`}
                 />
-                <div
-                  className={`grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br ${p.accent} text-3xl shadow-md`}
-                >
-                  {p.emoji}
-                </div>
+                {p.image ? (
+                  <div className="relative -mx-6 -mt-6 mb-2 h-44 overflow-hidden rounded-t-3xl">
+                    <Image
+                      src={p.image}
+                      alt={`${p.name} — ${p.category}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <span
+                      className={`absolute left-3 top-3 grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br ${p.accent} text-xl shadow-md`}
+                    >
+                      {p.emoji}
+                    </span>
+                  </div>
+                ) : (
+                  <div
+                    className={`grid h-16 w-16 place-items-center rounded-2xl bg-gradient-to-br ${p.accent} text-3xl shadow-md`}
+                  >
+                    {p.emoji}
+                  </div>
+                )}
                 <h3 className="mt-5 font-display text-2xl font-bold text-brand-dark">
                   {p.name}
                 </h3>

@@ -1,4 +1,5 @@
-import { site } from "@/lib/site";
+import Image from "next/image";
+import { site, heroImage } from "@/lib/site";
 
 export default function Hero() {
   const wa = `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
@@ -71,28 +72,22 @@ export default function Hero() {
         {/* Right visual */}
         <div className="relative flex justify-center animate-fadeUp" style={{ animationDelay: "150ms" }}>
           <div className="relative animate-floaty">
-            <div className="absolute inset-0 scale-125 rounded-full bg-brand-gold/20 blur-3xl" />
-            <div className="relative grid h-72 w-72 sm:h-80 sm:w-80 place-items-center rounded-full border border-brand-gold/30 bg-gradient-to-b from-white/10 to-transparent">
-              <div className="grid h-52 w-52 place-items-center rounded-full border border-white/10 bg-brand/40 text-center">
-                <div>
-                  <div className="text-6xl">🌿</div>
-                  <div className="mt-3 font-display text-2xl font-bold text-brand-goldLight">
-                    Powered by
-                  </div>
-                  <div className="font-display text-lg text-white">
-                    Frequency Infusion
-                  </div>
-                  <div className="text-xs uppercase tracking-widest text-white/60">
-                    Technology
-                  </div>
-                </div>
-              </div>
+            <div className="absolute inset-0 scale-110 rounded-[2rem] bg-brand-gold/20 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-brand-gold/30 shadow-2xl shadow-black/40 ring-1 ring-white/10">
+              <Image
+                src={heroImage}
+                alt="Solanki Biofield Therapy — Premium frequency-infused wellness supplements"
+                width={520}
+                height={520}
+                priority
+                className="h-auto w-[300px] sm:w-[420px] object-cover"
+              />
             </div>
             {/* orbiting badges */}
-            <span className="absolute -top-2 left-6 rounded-full bg-red-500 px-3 py-1 text-xs font-semibold shadow-lg">🐎 Stamina</span>
+            <span className="absolute -top-3 left-4 rounded-full bg-red-500 px-3 py-1 text-xs font-semibold shadow-lg">🐎 Stamina</span>
             <span className="absolute top-1/3 -right-4 rounded-full bg-indigo-500 px-3 py-1 text-xs font-semibold shadow-lg">🌙 Sleep</span>
-            <span className="absolute bottom-4 -left-4 rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-brand-dark shadow-lg">⚖️ Slim</span>
-            <span className="absolute -bottom-1 right-10 rounded-full bg-sky-500 px-3 py-1 text-xs font-semibold shadow-lg">🛡️ Immunity</span>
+            <span className="absolute bottom-6 -left-4 rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-brand-dark shadow-lg">⚖️ Slim</span>
+            <span className="absolute -bottom-2 right-8 rounded-full bg-sky-500 px-3 py-1 text-xs font-semibold shadow-lg">🛡️ Immunity</span>
           </div>
         </div>
       </div>

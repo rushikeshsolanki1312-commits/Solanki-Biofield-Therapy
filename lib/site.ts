@@ -32,7 +32,39 @@ export type Product = {
   accent: string; // tailwind gradient stops
   glow: string;
   benefits: string[];
+  image?: string;
 };
+
+export type Service = {
+  name: string;
+  tagline: string;
+  image: string;
+  points: string[];
+};
+
+export const heroImage = "/4.webp";
+export const ctaImage = "/5.webp";
+
+export const services: Service[] = [
+  {
+    name: "Acupuncture Therapy",
+    tagline: "Experience healing through expert acupuncture — restore balance and wellness in a serene, professional environment.",
+    image: "/1.webp",
+    points: ["Restores natural balance", "Relieves pain & stress", "Boosts overall wellness"],
+  },
+  {
+    name: "Chiropractic Care",
+    tagline: "Gentle chiropractic care to realign your body and move freely again.",
+    image: "/2.png",
+    points: ["Relieves neck & back pain", "Improves posture", "Restores mobility"],
+  },
+  {
+    name: "Cupping Therapy",
+    tagline: "Traditional cupping therapy for deep relief, better circulation and relaxation.",
+    image: "/3.png",
+    points: ["Relieves muscle tension", "Improves blood circulation", "Natural pain relief"],
+  },
+];
 
 export const products: Product[] = [
   {
@@ -142,6 +174,63 @@ export const products: Product[] = [
       "Supports Heart & Nerve Health",
       "Improves Overall Diabetic Wellness",
     ],
+  },
+  {
+    slug: "baldness-wellness-drops",
+    name: "Baldness Wellness Drops",
+    category: "Natural Hair & Scalp Support",
+    headline: "Revitalize Your Hair Naturally.",
+    short:
+      "Harness the power of herbal science for stronger, thicker hair — natural support for regrowth and a healthy scalp.",
+    emoji: "💇",
+    accent: "from-amber-700 to-yellow-900",
+    glow: "shadow-amber-700/30",
+    benefits: [
+      "Supports Hair Regrowth",
+      "Strengthens Hair Roots",
+      "Reduces Hair Fall",
+      "Nourishes Follicles & Scalp",
+      "Natural Herbal Formula",
+    ],
+    image: "/7.webp",
+  },
+  {
+    slug: "brain-health",
+    name: "Brain Health",
+    category: "Advanced Cognitive Support Formula",
+    headline: "Think Sharper. Stay Focused.",
+    short:
+      "Advanced cognitive support to improve focus, memory retention and mental clarity for a calm, balanced mind.",
+    emoji: "🧠",
+    accent: "from-blue-500 to-indigo-700",
+    glow: "shadow-blue-500/30",
+    benefits: [
+      "Improves Focus & Attention Span",
+      "Enhances Memory & Recall",
+      "Reduces Brain Fog",
+      "Promotes Calm & Balanced Mood",
+      "Advanced Cognitive Support",
+    ],
+    image: "/9.webp",
+  },
+  {
+    slug: "thyroid-wellness-drops",
+    name: "Thyroid Wellness Drops",
+    category: "Hormone & Thyroid Wellness",
+    headline: "Balanced Hormones. A Better You.",
+    short:
+      "Natural support for healthy thyroid function and hormonal balance — feel energized and well every day.",
+    emoji: "🦋",
+    accent: "from-purple-600 to-fuchsia-800",
+    glow: "shadow-purple-500/30",
+    benefits: [
+      "Supports Balanced Hormones",
+      "Promotes Thyroid Wellness",
+      "Natural & Herbal Support",
+      "Boosts Energy & Metabolism",
+      "Supports Overall Well-being",
+    ],
+    image: "/10.webp",
   },
 ];
 

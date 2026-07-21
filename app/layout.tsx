@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, Playfair_Display } from "next/font/google";
-import { site, products } from "@/lib/site";
+import { site, products, services } from "@/lib/site";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -35,6 +35,12 @@ export const metadata: Metadata = {
     "Immuni Kids Drops",
     "Slimitra weight management",
     "Dia Wellness Drops diabetes",
+    "Baldness Wellness Drops hair",
+    "Brain Health cognitive supplement",
+    "Thyroid Wellness Drops",
+    "acupuncture therapy Pimpri-Chinchwad",
+    "chiropractic care Chikhali",
+    "cupping therapy Maharashtra",
     "natural supplements Chikhali",
     "wellness supplements Maharashtra",
   ],
@@ -112,6 +118,13 @@ export default function RootLayout({
           priceCurrency: "INR",
           seller: { "@type": "Organization", name: site.name },
         },
+      })),
+      ...services.map((s) => ({
+        "@type": "Service",
+        serviceType: s.name,
+        description: s.tagline,
+        provider: { "@id": `${site.url}/#business` },
+        areaServed: { "@type": "City", name: "Pimpri-Chinchwad" },
       })),
     ],
   };
